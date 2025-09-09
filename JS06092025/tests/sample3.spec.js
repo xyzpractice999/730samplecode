@@ -16,5 +16,9 @@ test('test', async ({ page }) => {
   await welcomePage.verifyWelComePage();
   await welcomePage.logout();
   await homePage.verifyHomepage();
+  page.waitForTimeout(2000);
+  await homePage.verifyHomepage();
+  page.waitForTimeout(2000);
+  await homePage.verifyHomepage();
 
 });
