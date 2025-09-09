@@ -9,8 +9,11 @@ test('test', async ({ page }) => {
   const welcomePage=new WelcomePage(page);
 
   await BrowserUtils.invokeApp(page);
+  page.waitForTimeout(2000);
   await homePage.verifyHomepage();
+  page.waitForTimeout(2000);
   await homePage.navigateToLoginPage();
+  page.waitForTimeout(2000);
   await new Common(page).performlogin();
   page.waitForTimeout(2000);
   await welcomePage.verifyWelComePage();
