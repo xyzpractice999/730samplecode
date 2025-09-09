@@ -13,7 +13,6 @@ test('test', async ({ page }) => {
   await homePage.verifyHomepage();
   page.waitForTimeout(2000);
   await homePage.navigateToLoginPage();
-  page.waitForTimeout(2000);
   await new Common(page).performlogin();
   page.waitForTimeout(2000);
   await welcomePage.verifyWelComePage();
